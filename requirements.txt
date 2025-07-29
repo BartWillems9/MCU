@@ -1,7 +1,7 @@
 pandas
 numpy
 geopandas
-shapely.geometry
+shapely
 dash 
 pandas
-plotly.express
+plotly
