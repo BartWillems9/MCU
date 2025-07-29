@@ -17,7 +17,7 @@ df2['timestamp'] = pd.to_datetime(df2['timestamp'])
 ids_with_nan = df2.loc[df2['longitude'].isna() | df2['latitude'].isna(), 'id'].unique()
 gdfz = df2[~df2['id'].isin(ids_with_nan)].copy()
 
-neighborhoods = gpd.read_file('C:\\Users\\bcywl\\OneDrive\\Documenten\\MCU\\MCU-data-municip.shp')
+neighborhoods = gpd.read_file('MCU-data-municip.shp')
 neighborhoods = neighborhoods.to_crs("EPSG:4326")
 
 geometry = [Point(lon, lat) for lon, lat in zip(gdfz['longitude'], gdfz['latitude'])]
