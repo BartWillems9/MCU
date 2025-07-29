@@ -256,6 +256,6 @@ def update_temp_plot(selected_values, group_type, start_date, end_date):
     )
     return fig
 
-
+server = app.server
 if __name__ == '__main__':
     app.run(debug=True)
